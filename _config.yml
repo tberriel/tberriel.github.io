@@ -8,16 +8,16 @@ middle_name:
 last_name: Berriel Martins
 email: tberriel@unizar.es
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Professional learner, passionate about discovering and understanding the wonders of this beautiful world.
-  Currently, PhD candidate working with Javier Civera on Computer Vision and Representation Learning for World Models.
+  
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  Page icon <a href="https://www.flaticon.com/free-icons/tourist" title="tourist icons">Tourist icons created by photo3idea_studio - Flaticon</a>
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: tourist.png  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://tberriel.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/
@@ -105,7 +105,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
-  Don't hesitate to contact with me through email at tberriel@unizar.es
+  Don't hesitate to get in touch with me at tberriel@unizar.es
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
