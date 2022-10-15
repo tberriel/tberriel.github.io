@@ -21,4 +21,4 @@ social: true  # includes social icons at the bottom of the page
 
 Professional learner, passionate about discovering and understanding the wonders of this beautiful world. 
 
-Currently, working with Javier Civera on Computer Vision and Representation Learning for World Models.
+Currently, working with <a href="https://scholar.google.com/citations?user=j_sMzokAAAAJ&hl=es&oi=ao">Javier Civera</a> on Computer Vision and Representation Learning for World Models.
