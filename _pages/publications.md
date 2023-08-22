@@ -1,9 +1,9 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 
-description: publications by categories in reversed chronological order.
+description: Still working on them :)
 years: [2023]
 nav: true
 nav_order: 1
