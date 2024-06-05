@@ -47,10 +47,11 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Artificial intelligence
+    - title: 3D Representations
       items: 
-        - Disentangled representation learning
-        - Causal inference
+        - 3D Geometry
+        - Neural representations
+        - SLAM
 
 - title: Other Interests
   type: list
