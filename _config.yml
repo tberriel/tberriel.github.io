@@ -80,7 +80,6 @@ facebook_id: # your facebook id
 flickr_id: # your flickr id
 github_username: tberriel # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: _tberriel
 ieee_id: # your ieeexplore.ieee.org/author/id
 instagram_id: # your instagram id
 kaggle_id: # your kaggle id
@@ -338,7 +337,7 @@ filtered_bibtex_keywords:
     altmetric,
     arxiv,
     award,
-    award_name,
+    #award_name,
     bibtex_show,
     blog,
     code,
