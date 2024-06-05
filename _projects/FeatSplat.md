@@ -35,6 +35,9 @@ toc:
     - name: Mip-360, Tanks and Temples, and Deep Blending
     - name: ScanNet++
   - name: ScanNet++ Novel View Synthesis Challenge
+images:
+  compare: true
+  slider: true
 _styles: >
   .fake-img {
     background: black;
@@ -100,6 +103,15 @@ However, we consider it good style to mention author last names if you discuss s
 
 Just wrap the text you would like to show up in a footnote in a `<d-footnote>` tag.
 The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote>
+
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/prof_pic.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+</swiper-container>
+
+<img-comparison-slider>
+  {% include figure.liquid path="assets/img/prof_pic.jpg" class="img-fluid rounded z-depth-1" slot="first" %}
+  {% include figure.liquid path="assets/img/tourist.png" class="img-fluid rounded z-depth-1" slot="second" %}
+</img-comparison-slider>
 
 ---
 
