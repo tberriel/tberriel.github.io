@@ -66,7 +66,7 @@ _styles: >
 ---
 
 <a href="https://arxiv.org/abs/2405.15518" class="btn l-gutter" target="_blank" rel="noopener noreferrer">Paper <i class="ai ai-arxiv"></i></a>
-<a href="https://github.com/tberriel/FeatSplat" class="btn l-gutter" target="_blank" rel="noopener noreferrer">Code <i class="fab fa-github"></i></a>
+<a href="https://github.com/tberriel/" class="btn l-gutter" target="_blank" rel="noopener noreferrer">Code <i class="fab fa-github"></i></a>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -79,4 +79,29 @@ However, its use of spherical harmonics to represent scene colors limits the exp
 Our experiments show that these novel model for encoding the radiance considerably improves novel view synthesis for low overlap views that are distant from the training views. Finally, we also show the capacity and convenience of our feature vector representation, demonstrating its capability not only to generate RGB values for novel views, but also their per-pixel semantic labels. We will release the code upon acceptance.
 
 ---
+
+
+## Feature Splatting
+
+
+Citations are then used in the article body with the `<d-cite>` tag.
+The key attribute is a reference to the id provided in the bibliography.
+The key attribute can take multiple ids, separated by commas.
+
+The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover).
+If you have an appendix, a bibliography is automatically created and populated in it.
+
+Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.
+However, we consider it good style to mention author last names if you discuss something at length and it fits into the flow well — the authors are human and it’s nice for them to have the community associate them with their work.
+
+---
+
+## Evaluation
+
+Just wrap the text you would like to show up in a footnote in a `<d-footnote>` tag.
+The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote>
+
+---
+
+## ScanNet++ Novel View Synthesis Challenge
 
