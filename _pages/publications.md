@@ -3,10 +3,10 @@ layout: page
 permalink: /publications/
 title: Publications
 
-description: Still working on them :)
-years: [2023]
+description: Work in progress ...
+years: [2024,2023]
 nav: true
-nav_order: 1
+nav_order: 2
 ---
 <!-- _pages/publications.md -->
 <div class="publications">
