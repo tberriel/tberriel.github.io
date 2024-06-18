@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I was granted a PhD candidate scolarship by Gobierno de Aragón!  :sparkles: :smile:
+I was granted a PhD candidate scholarship by Gobierno de Aragón! :sparkles: :smile:
