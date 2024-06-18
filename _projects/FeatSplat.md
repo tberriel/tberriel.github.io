@@ -1,8 +1,11 @@
 ---
 layout: distill
 title: Feature Splatting for Better Novel View Synthesis with Low Overlap
+images:
+  slider: true
+  compare: true
 description: 
-tags: distill formatting
+tags: FeatSplat
 giscus_comments: false
 date: 2024-05-24
 featured: true
@@ -15,8 +18,7 @@ authors:
     url: "https://scholar.google.com/citations?user=j_sMzokAAAAJ&hl=en"
     affiliations:
       name: I3A, University of Zaragoza
-
-#bibliography: 2018-12-22-distill.bib
+bibliography: FeatSplat.bib
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
@@ -26,15 +28,6 @@ authors:
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
   - name: Feature Splatting
-    # if a section has subsections, you can add them as follows:
-    # subsections:
-    #   - name: Example Child Subsection 1
-    #   - name: Example Child Subsection 2
-  - name: Evaluation
-  - subsections:
-    - name: Mip-360, Tanks and Temples, and Deep Blending
-    - name: ScanNet++
-  - name: ScanNet++ Novel View Synthesis Challenge
 _styles: >
   .fake-img {
     background: black;
@@ -66,7 +59,20 @@ _styles: >
 ---
 
 <a href="https://arxiv.org/abs/2405.15518" class="btn l-gutter" target="_blank" rel="noopener noreferrer">Paper <i class="ai ai-arxiv"></i></a>
-<a href="https://github.com/tberriel/" class="btn l-gutter" target="_blank" rel="noopener noreferrer">Code <i class="fab fa-github"></i></a>
+<a href="https://github.com/tberriel/FeatSplat" class="btn l-gutter" target="_blank" rel="noopener noreferrer">Code <i class="fab fa-github"></i></a>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/both.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+    </div>
+</div>
+<div class="caption">
+    Novel view synthesis of a trajectory on the scene 03f7a0e617 from ScanNet++ dataset<d-cite key="yeshwanthliu2023scannetpp"></d-cite>. Left 3D Gaussian Splatting<d-cite key="kerbl20233d"></d-cite>, right FeatSplat32.
+</div>
+
+
+3D Gaussian Splatting <d-cite key="kerbl20233d"></d-cite> has emerged as a very promising scene representation, achieving state-of-the-art quality in novel view synthesis significantly faster than competing alternatives. 
+However, its use of spherical harmonics to represent scene colors limits the expressivity of 3D Gaussians and, as a consequence, the capability of the representation to generalize as we move away from the training views. 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -74,34 +80,37 @@ _styles: >
     </div>
 </div>
 
-3D Gaussian Splatting has emerged as a very promising scene representation, achieving state-of-the-art quality in novel view synthesis significantly faster than competing alternatives. 
-However, its use of spherical harmonics to represent scene colors limits the expressivity of 3D Gaussians and, as a consequence, the capability of the representation to generalize as we move away from the training views. In this paper, we propose to encode the color information of 3D Gaussians into per-Gaussian feature vectors, which we denote as Feature Splatting (FeatSplat). To synthesize a novel view, Gaussians are first "splatted" into the image plane, then the corresponding feature vectors are alpha-blended, and finally the blended vector is decoded by a small MLP to render the RGB pixel values. To further inform the model, we concatenate a camera embedding to the blended feature vector, to condition the decoding also on the viewpoint information.
-Our experiments show that these novel model for encoding the radiance considerably improves novel view synthesis for low overlap views that are distant from the training views. Finally, we also show the capacity and convenience of our feature vector representation, demonstrating its capability not only to generate RGB values for novel views, but also their per-pixel semantic labels. We will release the code upon acceptance.
-
----
+In this paper, we propose to encode the color information of 3D Gaussians into per-Gaussian feature vectors, which we denote as Feature Splatting (FeatSplat). To synthesize a novel view, Gaussians are first "splatted" into the image plane, then the corresponding feature vectors are alpha-blended, and finally the blended vector is decoded by a small MLP to render the RGB pixel values. To further inform the model, we concatenate a camera embedding to the blended feature vector, to condition the decoding also on the viewpoint information.
+Our experiments show that these novel model for encoding the radiance considerably improves novel view synthesis for low overlap views that are distant from the training views. Finally, we also show the capacity and convenience of our feature vector representation, demonstrating its capability not only to generate RGB values for novel views, but also to modify scene light after optimization, and to learn per-pixel semantic labels.
 
 
-## Feature Splatting
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/gifs/path_2_pe.gif" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/gifs/path_2_x.gif" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/gifs/path_2_y.gif" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/gifs/path_2_z.gif" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Inference-time modification of scene light.
+</div>
 
 
-Citations are then used in the article body with the `<d-cite>` tag.
-The key attribute is a reference to the id provided in the bibliography.
-The key attribute can take multiple ids, separated by commas.
 
-The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover).
-If you have an appendix, a bibliography is automatically created and populated in it.
-
-Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.
-However, we consider it good style to mention author last names if you discuss something at length and it fits into the flow well — the authors are human and it’s nice for them to have the community associate them with their work.
-
----
-
-## Evaluation
-
-Just wrap the text you would like to show up in a footnote in a `<d-footnote>` tag.
-The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote>
-
----
-
-## ScanNet++ Novel View Synthesis Challenge
-
+```scss
+@article{martins2024feature,
+      title={Feature Splatting for Better Novel View Synthesis with Low Overlap}, 
+      author={T. Berriel Martins and Javier Civera},
+      year={2024},
+      eprint={2405.15518},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
