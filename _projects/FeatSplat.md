@@ -26,23 +26,7 @@ bibliography: FeatSplat.bib
 #     for hyperlinks within the post to work correctly.
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
-toc:
-  - name: Feature Splatting
-<<<<<<< HEAD
-=======
-    # if a section has subsections, you can add them as follows:
-    # subsections:
-    #   - name: Example Child Subsection 1
-    #   - name: Example Child Subsection 2
-  - name: Evaluation
-  - subsections:
-    - name: Mip-360, Tanks and Temples, and Deep Blending
-    - name: ScanNet++
-  - name: ScanNet++ Novel View Synthesis Challenge
-images:
-  compare: true
-  slider: true
->>>>>>> 93897cd4c16a9e73b8de56eb72ef4e5d57283081
+
 _styles: >
   .fake-img {
     background: black;
