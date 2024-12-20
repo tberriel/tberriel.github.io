@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description:  Research in progress ...
+description:  Research in progress 🧑‍💻
 nav: true
 nav_order: 2
 ---

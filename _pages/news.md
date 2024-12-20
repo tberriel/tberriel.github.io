@@ -1,7 +1,7 @@
 ---
 layout: page
 title: News
-nav: true
+nav: False
 permalink: /news/
 ---
 
