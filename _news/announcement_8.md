@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-We just published our last project <a href="https://tberriel.github.io/ovoslam">"OVO-SLAM: Open-Vocabulary Online Simultaneous Localization and Mapping"</a> :dizzy:
+We just published our last project <a href="../ovoslam">"OVO-SLAM: Open-Vocabulary Online Simultaneous Localization and Mapping"</a> :dizzy:
