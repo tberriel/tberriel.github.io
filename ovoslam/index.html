@@ -250,10 +250,10 @@
       <div class="column">
         <div class="content">
           <p>
-            Each 3D segment has an associated CLIP descriptor selected as the most representative between the different 2D observations of the instance.
+            Each 3D segment is associated with a CLIP descriptor, selected from the descriptors of its 2D observations.
           </p>
           <p>
-            To generate 2D segments' descriptors, we combine 3 CLIP descriptors for each 2D mask: one of the full image; one of the segment removing the background; and one with the minimum bounding box that contains the full 2D mask.
+            To generate descriptors for 2D segments, we combine three CLIP descriptors for each 2D mask: one for the full image, one for the segment with the background removed, and one for the minimum bounding box containing the full 2D mask.
           </p>
         </div>
       </div>
@@ -262,7 +262,7 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-                A pre-trained neural-network predicts a weight for each dimension of each descriptor, and then these are merged together as a weighted-average sum.
+                Then, a pre-trained neural network predicts a weight for each dimension of each descriptor, and finally these descriptors are merged together using a weighted-average sum.
             </p>
             <img src="./static/images/clips_merger.png" alt="Matting example">
           </div>
