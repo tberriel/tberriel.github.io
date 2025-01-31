@@ -65,7 +65,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">OVO-SLAM: Open-Vocabulary Online Simultaneous Localization and Mapping</h1>
+          <h1 class="title is-1 publication-title">Open-Vocabulary Online Semantic Mapping for SLAM</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://tberriel.github.io">Tomás Berriel Martins</a><sup>1</sup>,</span>
@@ -129,7 +129,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">OVO-SLAM</span> builds 3D semantic representations with open-vocabulary online 3D segmentation.
+        <span class="dnerf">OVO</span> builds 3D semantic representations with open-vocabulary online 3D segmentation.
       </h2>
     </div>
   </div>
@@ -144,13 +144,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first Open-Vocabulary Online 3D semantic SLAM pipeline, that denote as OVO-SLAM.
+            We present the first Open-Vocabulary Online 3D semantic mapping for SLAM, that denote as OVO-mapping.
           </p>
           <p>
             Our primary contribution is in the pipeline itself, particularly in the mapping thread. Given a set of posed RGB-D frames, we detect and track 3D segments, which we describe using CLIP vectors, calculated through a novel aggregation from the viewpoints where these 3D segments are observed.
           </p>
           <p>
-            Notably, our OVO-SLAM pipeline is not only faster but also achieves better segmentation metrics compared to offline approaches in the literature. Along with superior segmentation performance, we show experimental results of our contributions integrated with Gaussian-SLAM, being the first ones demonstrating end-to-end open-vocabulary online 3D reconstructions without relying on ground-truth camera poses or scene geometry.
+            Notably, our OVO-mapping pipeline is not only faster but also achieves better segmentation metrics compared to offline approaches in the literature. Along with superior segmentation performance, we show experimental results of our contributions integrated with Gaussian-SLAM, being the first ones demonstrating end-to-end open-vocabulary online 3D reconstructions without relying on ground-truth camera poses or scene geometry.
           </p>
         </div>
       </div>
@@ -232,7 +232,7 @@
           <p>
             Given an input RGB-D video, a visual SLAM pipeline selects a set of keyframes and estimates their poses and a 3D point cloud representing the scene. From the 3D representation, our OVO-SLAM mapping module extracts and tracks 3D segments and assigns per-3D-segment CLIP vectors aggregated from those extracted in the keyframes.
 
-            OVO-SLAM outperforms state-of-the-art Open-Vocabulary 3D segmentation baselines, despite being the only one that can both run online and without groud-truth camera poses.
+            OVO-mapping outperforms state-of-the-art Open-Vocabulary 3D segmentation baselines, despite being the only one that can both run online and without groud-truth camera poses.
           </p>
         </div>
         <div class="content has-text-centered">
