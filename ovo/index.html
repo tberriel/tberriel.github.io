@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="OVO-SLAM: Open-Vocabulary Online Simultaneous Localization and Mapping.">
+  <meta name="keywords" content="SLAM, 3D, semantic, Open-Vocabulary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OVO-SLAM</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/egg-svgrepo-com.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://tberriel.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://tberriel.github.io/projects/FeatSplat/">
+            FeatSplat
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Open-Vocabulary Online Semantic Mapping for SLAM</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://tberriel.github.io">Tomás Berriel Martins</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://oswaldm.github.io/">Martin R. Oswald</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=j_sMzokAAAAJ&hl=en">Javier Civera</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Zaragoza,</span>
+            <span class="author-block"><sup>2</sup>University of Amsterdam</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/pdf/ovo_v2.0.pdf"
+                   class="internal-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2411.15043"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://bit.ly/3BlS71b"
+                   class="external-link button is-normal is-rounded is-light-gray">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code 🚧</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/querying_office0_x4.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">OVO</span> builds 3D semantic representations with open-vocabulary online 3D segmentation.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present the first Open-Vocabulary Online 3D semantic mapping for SLAM, that denote as OVO.
+          </p>
+          <p>
+            Our primary contribution is in the pipeline itself, particularly in the mapping thread. Given a set of posed RGB-D frames, we detect and track 3D segments, which we describe using CLIP vectors, calculated through a novel aggregation from the viewpoints where these 3D segments are observed.
+          </p>
+          <p>
+            Notably, our OVO-mapping pipeline is not only faster but also achieves better segmentation metrics compared to offline approaches in the literature. Along with superior segmentation performance, we show experimental results of our contributions integrated with Gaussian-SLAM and ORB-SLAM2, being the first ones demonstrating end-to-end open-vocabulary online 3D reconstructions without relying on ground-truth camera poses or scene geometry.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel is-dark">
+        <div class="item item-office0">
+          <video poster="" id="office0" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/office0_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-office1">
+          <video poster="" id="office1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/office1_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-office2">
+          <video poster="" id="office2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/office2_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-office3">
+          <video poster="" id="office3" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/office3_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-office4">
+          <video poster="" id="office4" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/office4_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-room0">
+          <video poster="" id="room0" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/room0_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-room1">
+          <video poster="" id="room1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/room1_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-room2">
+          <video poster="" id="room2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/room2_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">System</h2>
+
+        <!--Pipeline -->
+        <div class="content has-text-centered">
+          <img src="./static/images/ovomapping.png" alt="OVO pipeline" />
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Given an input RGB-D video, a visual SLAM pipeline selects a set of keyframes and estimates their poses and a 3D point cloud representing the scene. From the 3D representation, our mapping module extracts and tracks 3D segments and assigns per-3D-segment CLIP vectors aggregated from those extracted in the keyframes.
+
+            OVO outperforms state-of-the-art Open-Vocabulary 3D segmentation baselines, despite being the only one that can both run online and without groud-truth camera poses.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/table_2.png" alt="Table 2 from paper" />
+        </div>
+        <!--/ Pipeline -->
+
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">CLIP descriptors</h3>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+
+      <!-- CLIPs merging -->
+      <div class="column">
+        <div class="content">
+          <p>
+            Each 3D segment is associated with a CLIP descriptor, selected from the descriptors of its 2D observations.
+          </p>
+          <p>
+            To generate descriptors for 2D segments, we combine three CLIP descriptors for each 2D mask: one for the full image, one for the segment with the background removed, and one for the minimum bounding box containing the full 2D mask.
+          </p>
+
+          <p>
+                Then, a pre-trained neural network predicts a weight for each dimension of each descriptor, and finally these descriptors are merged together using a weighted-average sum.
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/clips_merger.png" alt="Matting example">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ CLIPs merging. -->
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{martins2024ovo,
+        title={OVO-SLAM: Open-Vocabulary Online Simultaneous Localization and Mapping},
+        author={Martins, Tomas Berriel and Oswald, Martin R and Civera, Javier},
+        journal={arXiv preprint arXiv:2411.15043},
+        year={2024}
+      }
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/pdf/ovoslam_v1.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/tberriel" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is based on <a
+            href="https://nerfies.github.io">Nerfies</a> and licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
