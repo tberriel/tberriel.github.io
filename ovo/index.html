@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="OVO-SLAM: Open-Vocabulary Online Simultaneous Localization and Mapping.">
+        content="Open-Vocabulary Online Semantic Mapping for SLAM">
   <meta name="keywords" content="SLAM, 3D, semantic, Open-Vocabulary">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OVO-SLAM</title>
+  <title>OVO</title>
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -104,12 +104,12 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://bit.ly/3BlS71b"
-                   class="external-link button is-normal is-rounded is-light-gray">
+                <a href="https://github.com/tberriel/ovo"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code 🚧</span>
+                  <span>Code</span>
                   </a>
               </span>
             </div>
@@ -144,13 +144,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first Open-Vocabulary Online 3D semantic mapping for SLAM, that denote as OVO.
+            We present an Open-Vocabulary Online 3D semantic mapping for SLAM, , that we denote by its acronym OVO.
           </p>
           <p>
-            Our primary contribution is in the pipeline itself, particularly in the mapping thread. Given a set of posed RGB-D frames, we detect and track 3D segments, which we describe using CLIP vectors, calculated through a novel aggregation from the viewpoints where these 3D segments are observed.
+            Given a sequence of posed RGB-D frames, we detect and track 3D segments, which we describe using CLIP vectors. These are computed from the viewpoints where they are observed by a novel CLIP merging method.
           </p>
           <p>
-            Notably, our OVO-mapping pipeline is not only faster but also achieves better segmentation metrics compared to offline approaches in the literature. Along with superior segmentation performance, we show experimental results of our contributions integrated with Gaussian-SLAM and ORB-SLAM2, being the first ones demonstrating end-to-end open-vocabulary online 3D reconstructions without relying on ground-truth camera poses or scene geometry.
+            Notably, our \ours has a significantly lower computational and memory footprint than offline baselines, while also showing better segmentation metrics than them. Along with superior segmentation performance, we also show experimental results of our mapping contributions integrated with two different SLAM backbones (Gaussian-SLAM and ORB-SLAM2), being the first ones demonstrating end-to-end open-vocabulary online 3D reconstructions without relying on ground-truth camera poses or scene geometry.
           </p>
         </div>
       </div>
@@ -287,7 +287,7 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>
       @article{martins2024ovo,
-        title={OVO-SLAM: Open-Vocabulary Online Simultaneous Localization and Mapping},
+        title={Open-Vocabulary Online Semantic Mapping for SLAM},
         author={Martins, Tomas Berriel and Oswald, Martin R and Civera, Javier},
         journal={arXiv preprint arXiv:2411.15043},
         year={2024}
