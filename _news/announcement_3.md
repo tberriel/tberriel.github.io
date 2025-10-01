@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2023-08-05 07:59:00-0400
+date: 2024-11-22 16:20:00-0400
 inline: true
 related_posts: false
 ---
 
-A short version of our paper  <a href="https://github.com/tberriel/RayPatchQuerying/tree/main">"Ray-Patch: An Efficient Querying for Light Field Transformers"</a> has been accepted for publication on RCV - ICCV 2023 Workshop. 
+We just published our last project <a href="../ovo">"Open-Vocabulary Online Semantic Mapping for SLAM"</a> :dizzy:

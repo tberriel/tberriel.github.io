@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-1-22 07:59:00-0400
+date: 2024-11-22 16:20:00-0400
 inline: true
 related_posts: false
 ---
 
-From April until July, I will be doing a 4 months research stay at the CV Lab, from University van Amsterdam, under the supervision of Assistant Professor <a href="https://oswaldm.github.io/">Martin R. Oswald</a>. I am eager to collaborate with such an expert on neural representations for SLAM! :smile:
+The reviewed version of <a href="../ovo">"OVO"</a> has been accepted for publication at Robotics and Automation Letters :sparkles: 

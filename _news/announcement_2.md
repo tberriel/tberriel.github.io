@@ -1,7 +1,8 @@
 ---
 layout: post
-date: 2023-07-11 07:59:00-0400
+date: 2024-7-21 16:20:00-0400
 inline: true
+related_posts: false
 ---
 
-As last year, in the course 2023 - 2024, I will help Javier Civera, J. M. Montiel, J. Bermudez and J. D. Tardos in the laboratory sessions of `Machine Learning` and `Computer Vision` of the Master in Robotics, Graphics and Computer Vision, and `Aprendizaje automático` of the `BSc in Informatics Engineering`.  I am eager to continue collaborating and learning from such expert and dedicated faculties!
+Our paper <a href="https://github.com/tberriel/FeatSplat">"Feature Splatting for Better Novel View Synthesis with Low Overlap"</a> has been accepted for publication at the British Machine Vision Conference (BMVC) 2024!
