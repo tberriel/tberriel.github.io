@@ -1,6 +1,6 @@
 # OVO
 
-This is the repository that contains source code for the [OVO website](https://tberriel.github.io/ovoslam) and is based on [Nerfies'](https://github.com/nerfies/nerfies.github.io).
+This is the repository that contains source code for the [OVO website](https://tberriel.github.io/ovo) and is based on [Nerfies'](https://github.com/nerfies/nerfies.github.io).
 
 If you find OVO useful for your work please cite:
 ```
