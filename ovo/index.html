@@ -66,6 +66,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Open-Vocabulary Online Semantic Mapping for SLAM</h1>
+          <p class="title is-3 publication-title">RAL 2025</p>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://tberriel.github.io">Tomás Berriel Martins</a><sup>1</sup>,</span>
@@ -232,14 +233,13 @@
           <p>
             Given an input RGB-D video, a visual SLAM pipeline selects a set of keyframes and estimates their poses and a 3D point cloud representing the scene. From the 3D representation, our mapping module extracts and tracks 3D segments and assigns per-3D-segment CLIP vectors aggregated from those extracted in the keyframes.
 
-            OVO outperforms state-of-the-art Open-Vocabulary 3D segmentation baselines, despite being the only one that can both run online and without groud-truth camera poses.
+            OVO outperforms state-of-the-art Open-Vocabulary 3D segmentation baselines, despite being the only one that can both run online, without groud-truth camera poses, and support loop-closure optimization.
           </p>
         </div>
         <div class="content has-text-centered">
           <img src="./static/images/table_2.png" alt="Table 2 from paper" />
         </div>
         <!--/ Pipeline -->
-
       </div>
     </div>
 
@@ -264,18 +264,36 @@
           <p>
                 Then, a pre-trained neural network predicts a weight for each dimension of each descriptor, and finally these descriptors are merged together using a weighted-average sum.
           </p>
+          <p>
+                After, pre-training the neural-network in ScanNet++ we validate its performance with zero-shot evaluation in Replica and ScanNet200, outperforming previous approaches. 
+          </p>
+          <p>            
+                We also showcase its ability to retain language-image properties evaluating generic phrases as queries rather than only classes.
+          </p>
         </div>
       </div>
 
       <div class="column">
         <div class="columns is-centered">
           <div class="column content">
-            <img src="./static/images/clips_merger.png" alt="Matting example">
+            <img src="./static/images/table_7.png" alt="Table 7 from paper">
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/clips_merger.png" alt="Weights predictor arch">
           </div>
         </div>
       </div>
     </div>
     <!--/ CLIPs merging. -->
+
+    <div class="columns is-centered">
+      <div class="content has-text-centered">
+          <img src="./static/images/gen_queries.png" alt="Visualization of generic queries">
+      </div>
+    </div>
+
 
     </div>
   </div>
@@ -286,12 +304,12 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-      @article{martins2024ovo,
-        title={Open-Vocabulary Online Semantic Mapping for SLAM},
-        author={Martins, Tomas Berriel and Oswald, Martin R and Civera, Javier},
-        journal={arXiv preprint arXiv:2411.15043},
-        year={2024}
-      }
+    @article{martins2024ovo,
+      title={Open-Vocabulary Online Semantic Mapping for SLAM},
+      author={Martins, Tomas Berriel and Oswald, Martin R. and Civera, Javier},
+      journal={IEEE Robotics and Automation Letters}, 
+      year={2025},
+    }
 </code></pre>
   </div>
 </section>
