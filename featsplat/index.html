@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Feature Splatting for Better Novel View Synthesis with Low Overlap">
+  <meta name="keywords" content="3DGS, NVS, semantic, MLP">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    FeatSplat
+  </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/egg-svgrepo-com.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://tberriel.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://tberriel.github.io/ovo/">
+            OVO
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Feature Splatting for Better Novel View Synthesis with Low Overlap</h1>
+          <p class="title is-3 publication-title">BMVC 2024</p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://tberriel.github.io">Tomás Berriel Martins</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=j_sMzokAAAAJ&hl=en">Javier Civera</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">I3A, University of Zaragoza</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2405.15518"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/tberriel/FeatSplat"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="../assets/video/both.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Novel view synthesis of a trajectory on the scene 03f7a0e617 from ScanNet++ dataset<d-cite key="yeshwanthliu2023scannetpp"></d-cite>. Left 3D Gaussian Splatting<d-cite key="kerbl20233d"></d-cite>, right FeatSplat32.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+        <p>
+          3D Gaussian Splatting <d-cite key="kerbl20233d"></d-cite> has emerged as a very promising scene representation, achieving state-of-the-art quality in novel view synthesis significantly faster than competing alternatives. 
+          However, its use of spherical harmonics to represent scene colors limits the expressivity of 3D Gaussians and, as a consequence, the capability of the representation to generalize as we move away from the training views. 
+        </p>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="../assets/img/publication_preview/featsplat.jpg"
+                type="image/jpg">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Novel view synthesis of a trajectory on the scene 03f7a0e617 from ScanNet++ dataset<d-cite key="yeshwanthliu2023scannetpp"></d-cite>. Left 3D Gaussian Splatting<d-cite key="kerbl20233d"></d-cite>, right FeatSplat32.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+        <p>
+        In this paper, we propose to encode the color information of 3D Gaussians into per-Gaussian feature vectors, which we denote as Feature Splatting (FeatSplat). To synthesize a novel view, Gaussians are first "splatted" into the image plane, then the corresponding feature vectors are alpha-blended, and finally the blended vector is decoded by a small MLP to render the RGB pixel values. To further inform the model, we concatenate a camera embedding to the blended feature vector, to condition the decoding also on the viewpoint information.
+        </p>
+        <p>
+        Our experiments show that these novel model for encoding the radiance considerably improves novel view synthesis for low overlap views that are distant from the training views. Finally, we also show the capacity and convenience of our feature vector representation, demonstrating its capability not only to generate RGB values for novel views, but also to modify scene light after optimization, and to learn per-pixel semantic labels.
+        </p>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+
+    <div class="caption">
+      Inference-time modification of scene light.
+    </div>
+      <div id="results-carousel" class="carousel results-carousel is-dark">
+        <div class="item item-gif-pe">
+          <video poster="" id="gif-pe" autoplay controls muted loop playsinline height="100%">
+            <source src="../assets/gifs/path_2_pe.gif"
+                    type="gif">
+          </video>
+        <div class="item item-gif-x">
+          <video poster="" id="gif-x" autoplay controls muted loop playsinline height="100%">
+            <source src="../assets/gifs/path_2_x.gif"
+                    type="gif">
+          </video>
+        </div>
+        <div class="item item-gif-y">
+          <video poster="" id="gif-y" autoplay controls muted loop playsinline height="100%">
+            <source src="../assets/gifs/path_2_y.gif"
+                    type="gif">
+          </video>
+        </div>
+        <div class="item item-gif-z">
+          <video poster="" id="gif-z" autoplay controls muted loop playsinline height="100%">
+            <source src="../assets/gifs/path_2_z.gif"
+                    type="gif">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+    @article{martins2024feature,
+          title={Feature Splatting for Better Novel View Synthesis with Low Overlap}, 
+          author={T. Berriel Martins and Javier Civera},
+          journal={British Machine Vision Conference (BMVC)},
+          year={2024},
+          eprint={2405.15518},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV}
+    }
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is based on <a
+            href="https://nerfies.github.io">Nerfies</a> and licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
