@@ -107,6 +107,7 @@ Our experiments show that these novel model for encoding the radiance considerab
 @article{martins2024feature,
       title={Feature Splatting for Better Novel View Synthesis with Low Overlap}, 
       author={T. Berriel Martins and Javier Civera},
+      journal={British Machine Vision Conference (BMVC)},
       year={2024},
       eprint={2405.15518},
       archivePrefix={arXiv},
