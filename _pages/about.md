@@ -17,10 +17,12 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 
-I am working with Asc. Prof. <a href="https://scholar.google.com/citations?user=j_sMzokAAAAJ&hl=es&oi=ao">Javier Civera</a> on Computer Vision and Representation Learning for World Models. We aim to disentangle the properties of the elements on a scene to improve the generalization capabilities of current semantic SLAM algorithms. Currently I am diving in the multi-scene neural rendering world.
+During my PhD I have been working under the supervision of Prof. <a href="https://scholar.google.com/citations?user=j_sMzokAAAAJ&hl=es&oi=ao">Javier Civera</a> on enriching traditional 3D scenes reconstructions with novel view synthesis and open-vocabulary semantics.
 
-I have special interest on the human brain and how it works and develops abstract representations and thoughts.
+From October to December 2025 I was a Student Researcher at Google Munich AR semantic perception team. I will be back from February until April 2026 to finish my project :smile:
 
-Professional learner, passionate about discovering and understanding the wonders of this complex world. I enjoy meeting new cultures and their richness.
+Personally, I have special interest on the human brain and how it works and develops abstract representations and thoughts.
+
+I am passionate about discovering and understanding our wonderful world. I enjoy hiking, reading historic and thriller novels, meeting new cultures and specially tasting their gastronomy.
 
 Born in Uruguay :uruguay:, raised in Italy :it:, currently in Spain :es:. 
