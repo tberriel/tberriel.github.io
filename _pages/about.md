@@ -16,13 +16,12 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
+I am a CV enthusiast close to finishing my PhD. Right now I am looking for CV research/software engineer roles related to 3D CV, SLAM, semantics and VLMs.
 
-During my PhD I have been working under the supervision of Prof. <a href="https://scholar.google.com/citations?user=j_sMzokAAAAJ&hl=es&oi=ao">Javier Civera</a> on enriching traditional 3D scenes reconstructions with novel view synthesis and open-vocabulary semantics.
+During my PhD I have been working under the supervision of Prof. <a href="https://scholar.google.com/citations?user=j_sMzokAAAAJ">Javier Civera</a> on enriching traditional 3D scene reconstructions and SLAM algorithms with novel view synthesis and open-vocabulary semantics.
 
-From October to December 2025 I was a Student Researcher at Google Munich AR semantic perception team. I will be back from February until April 2026 to finish my project :smile:
+From October 2025 to April 2026 I was a Student Researcher at Google Munich AR semantic perception team, working with <a href="https://scholar.google.com/citations?user=jOKMlwsAAAAJ">Juan José Gomez</a>. :smile:
 
-Personally, I have special interest on the human brain and how it works and develops abstract representations and thoughts.
-
-I am passionate about discovering and understanding our wonderful world. I enjoy hiking, reading historic and thriller novels, meeting new cultures and specially tasting their gastronomy.
+I am passionate about discovering and understanding our wonderful world, and have a special interest in the human brain and how it develops abstract representations and thoughts. I enjoy hiking, reading historic and thriller novels, meeting new cultures and especially tasting their gastronomy.
 
 Born in Uruguay :uruguay:, raised in Italy :it:, currently in Spain :es:. 
