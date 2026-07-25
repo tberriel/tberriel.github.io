@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-From October to April I wa a Student Researcher at Google's Munich. It was an increadible experience to colaborate with the AR Semantic Perceptionh team! :fire:
+From October to April I wa a Student Researcher at Google Munich. It was an increadible experience to colaborate with the AR Semantic Perceptionh team! :fire:
