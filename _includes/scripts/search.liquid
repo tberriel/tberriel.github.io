@@ -107,7 +107,7 @@
             {%- assign title = item.title | escape -%}
           {%- endif -%}
           id: "news-{{ title | slugify }}",
-          title: '{{ title | emojify }}',
+          title: '{{ title | emojify | replace: "'", "&#39;" }}',
           description: "{{ item.description | strip_html | strip_newlines | escape }}",
           section: "News",
           {%- unless item.inline -%}
@@ -127,7 +127,7 @@
                 {%- assign title = item.title | escape -%}
               {%- endif -%}
               id: "{{ collection.label }}-{{ title | slugify }}",
-              title: '{{ title | emojify }}',
+              title: '{{ title | emojify | replace: "'", "&#39;" }}',
               description: "{{ item.description | strip_html | strip_newlines | escape }}",
               section: "{{ collection.label | capitalize }}",
               {%- unless item.inline -%}
